@@ -2,8 +2,11 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding.ActivityResult.setOnClickListener(e->{
          Intent intent = new Intent(MainActivity.this, ActivityResult.class);
-            startActivity(intent);
+            startActivityForResult(intent, 100); // requestCode = 100(intent);
             intent.putExtra("title","Activity result");
         });
 
@@ -188,6 +191,20 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK){
+            assert data != null;
+            String value = data.getStringExtra("result_key");
+            Toast.makeText(this, value, Toast.LENGTH_LONG).show();
+            Log.d("TAG", "onActivityResult: " + value);
+
+        }
+    }
+
 
     @Override
     public void onBackPressed() {

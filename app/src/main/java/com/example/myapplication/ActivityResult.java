@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,7 +42,15 @@ public class ActivityResult extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        onBackPressed(); // Go back when button is clicked
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra("result_key", "Some data from this activity");
+        setResult(RESULT_OK, resultIntent);
+
+        Log.d("TAG","press on it00000");
+
+        // Finish activity
+        finish();
+//        onBackPressed(); // Go back when button is clicked
         return true;
     }
 }
