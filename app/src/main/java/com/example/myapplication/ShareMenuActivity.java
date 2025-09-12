@@ -25,6 +25,19 @@ public class ShareMenuActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-        });
+        }); // Enable the back/up button in the toolbar
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+//            getSupportActionBar().setHomeAsUpIndicator(true); // optional custom icon
+        }
+
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed(); // Go back when button is clicked
+        return true;
     }
 }

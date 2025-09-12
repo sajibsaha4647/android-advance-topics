@@ -29,7 +29,22 @@ public class SqliteActivity extends AppCompatActivity {
                     return insets;
                 });
 
+        // Enable the back/up button in the toolbar
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+//            getSupportActionBar().setHomeAsUpIndicator(true); // optional custom icon
+        }
+
             }
+
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed(); // Go back when button is clicked
+        return true;
+    }
 
 
 }

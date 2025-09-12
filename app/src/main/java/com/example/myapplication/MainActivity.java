@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -186,5 +187,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Show a confirmation dialog before exiting
+        new AlertDialog.Builder(this)
+                .setTitle("Exit App")
+                .setMessage("Are you sure you want to exit?")
+                .setPositiveButton("Yes", (dialog, which) -> super.onBackPressed())
+                .setNegativeButton("No", null)
+                .show();
     }
 }
