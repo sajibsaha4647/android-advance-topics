@@ -27,6 +27,8 @@ public class GridViewInfo extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Grid view");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

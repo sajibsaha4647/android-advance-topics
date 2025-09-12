@@ -26,6 +26,7 @@ public class AboutUsMenuActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        setTitle("About Us");
 
 
         // Enable the back/up button in the toolbar

@@ -27,6 +27,8 @@ public class FeedBackMenuActivity extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Feedback Menu");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

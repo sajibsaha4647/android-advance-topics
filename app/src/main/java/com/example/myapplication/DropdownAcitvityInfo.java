@@ -30,6 +30,8 @@ public class DropdownAcitvityInfo extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("dropdown activity");
+
 
 
         // Enable the back/up button in the toolbar

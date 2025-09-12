@@ -27,6 +27,8 @@ public class SpinnerInfo extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Spinner info");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

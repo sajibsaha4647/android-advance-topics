@@ -27,6 +27,8 @@ public class MenuViewInfo extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Menu list");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

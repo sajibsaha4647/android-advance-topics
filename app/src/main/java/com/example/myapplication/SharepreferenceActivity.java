@@ -27,6 +27,8 @@ public class SharepreferenceActivity extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Share preference");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

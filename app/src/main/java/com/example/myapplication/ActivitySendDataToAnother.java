@@ -27,6 +27,8 @@ public class ActivitySendDataToAnother extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("activity send data");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

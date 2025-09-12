@@ -27,6 +27,8 @@ public class RoomDatabase extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Room Database");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -33,6 +33,8 @@ public class ExpandableListViewActivity extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Expandable list");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -27,6 +27,8 @@ public class FullscreenActivity extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Full screen activity");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -29,6 +29,8 @@ public class SqliteActivity extends AppCompatActivity {
                     return insets;
                 });
 
+        setTitle("Sqlite notepad");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

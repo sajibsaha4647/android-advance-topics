@@ -27,6 +27,8 @@ public class AutocompleteActivity extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Auto complete edittext");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -27,6 +27,8 @@ public class FragmentActivity extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Fragment view");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

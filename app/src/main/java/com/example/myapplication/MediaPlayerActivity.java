@@ -25,6 +25,7 @@ public class MediaPlayerActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        setTitle("Media player");
 
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){

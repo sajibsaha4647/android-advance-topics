@@ -27,6 +27,8 @@ public class SplashScreenActivity extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Splash screen");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

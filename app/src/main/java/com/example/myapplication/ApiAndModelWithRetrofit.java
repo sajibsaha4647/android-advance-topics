@@ -27,6 +27,8 @@ public class ApiAndModelWithRetrofit extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Retro fit api call");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

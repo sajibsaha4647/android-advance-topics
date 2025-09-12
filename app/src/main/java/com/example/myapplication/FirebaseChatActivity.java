@@ -27,6 +27,8 @@ public class FirebaseChatActivity extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("Chat App");
+
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

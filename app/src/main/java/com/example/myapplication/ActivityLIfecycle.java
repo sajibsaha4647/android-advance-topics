@@ -27,6 +27,8 @@ public class ActivityLIfecycle extends AppCompatActivity {
             return insets;
         });
 
+        setTitle("ActivityLife");
+
 
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
