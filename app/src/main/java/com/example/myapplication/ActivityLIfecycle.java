@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +28,8 @@ public class ActivityLIfecycle extends AppCompatActivity {
             return insets;
         });
 
+        Toast.makeText(this,"oncreate",Toast.LENGTH_LONG).show();
+
         setTitle("ActivityLife");
 
 
@@ -37,6 +40,36 @@ public class ActivityLIfecycle extends AppCompatActivity {
 
 //            getSupportActionBar().setHomeAsUpIndicator(true); // optional custom icon
         }
+    }
+
+    @Override
+    protected void onStart() {
+        Toast.makeText(this,"onStart",Toast.LENGTH_LONG).show();
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        Toast.makeText(this,"onResume",Toast.LENGTH_LONG).show();
+        super.onResume();
+    }
+
+    @Override
+    protected void onStop() {
+        Toast.makeText(this,"onStop",Toast.LENGTH_LONG).show();
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Toast.makeText(this,"onDestroy",Toast.LENGTH_LONG).show();
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onRestart() {
+        Toast.makeText(this,"onRestart",Toast.LENGTH_LONG).show();
+        super.onRestart();
     }
 
     @Override
