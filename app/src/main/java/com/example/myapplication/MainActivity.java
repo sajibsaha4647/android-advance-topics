@@ -52,8 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
         binding.ActivityPassDataToAnother.setOnClickListener(e->{
          Intent intent = new Intent(MainActivity.this, ActivitySendDataToAnother.class);
-            startActivity(intent);
             intent.putExtra("title","Activity share data");
+         startActivity(intent);
+
         });
 
         binding.ApiModelRetrofit.setOnClickListener(e->{
