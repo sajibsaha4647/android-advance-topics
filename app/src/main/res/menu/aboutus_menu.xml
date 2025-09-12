@@ -12,6 +12,6 @@
         android:id="@+id/action_settings"
         android:title="Settings"
         android:icon="@drawable/ic_launcher_foreground"
-        app:showAsAction="never" />
+        app:showAsAction="always|withText" />
 
 </menu>

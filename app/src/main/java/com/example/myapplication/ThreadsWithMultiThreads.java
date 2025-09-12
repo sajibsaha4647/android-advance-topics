@@ -40,6 +40,7 @@ public class ThreadsWithMultiThreads extends AppCompatActivity {
         }
 
     }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed(); // Go back when button is clicked
