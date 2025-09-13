@@ -6,8 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="20dp"
+    android:padding="20dp"
     tools:context=".DropdownAcitvityInfo">
 
-
+    <Spinner
+        android:layout_margin="20dp"
+        android:id="@+id/spinnerFruits"
+        android:layout_width="match_parent"
+        android:background="@drawable/spinner_background"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:minHeight="60dp"
+        />
 
 </LinearLayout>
