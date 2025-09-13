@@ -99,6 +99,12 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("title","Fragment View");
         });
 
+         binding.DropdownView.setOnClickListener(e->{
+         Intent intent = new Intent(MainActivity.this, DropdownAcitvityInfo.class);
+            startActivity(intent);
+            intent.putExtra("title","Dropdown View");
+        });
+
         binding.FullScreenActivity.setOnClickListener(e->{
          Intent intent = new Intent(MainActivity.this, FullscreenActivity.class);
             startActivity(intent);

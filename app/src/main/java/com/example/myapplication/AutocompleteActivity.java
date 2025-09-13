@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,7 @@ import com.example.myapplication.databinding.ActivityAutocompleteBinding;
 public class AutocompleteActivity extends AppCompatActivity {
 
     private ActivityAutocompleteBinding binding ;
+    private AutoCompleteTextView autoCompleteTextView ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +31,21 @@ public class AutocompleteActivity extends AppCompatActivity {
         });
 
         setTitle("Auto complete edittext");
-
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-//            getSupportActionBar().setHomeAsUpIndicator(true); // optional custom icon
         }
+
+        String[] fruits= {"Apple", "Banana", "Cherry", "Date", "Grapes", "Mango", "Orange"} ;
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.custom_dropdown_item,fruits);
+        binding.autoCompleteTextView.setAdapter(adapter);
+
+        binding.autoCompleteTextView.setOnClickListener(
+                v -> binding.autoCompleteTextView.showDropDown()
+        );
+
     }
 
     @Override

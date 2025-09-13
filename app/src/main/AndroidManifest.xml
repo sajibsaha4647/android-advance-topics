@@ -16,15 +16,15 @@
         <activity
             android:name=".SideDraweWithBottomNav"
             android:exported="false"
-            android:theme="@style/Theme.Android_advanced_phase" />
+             />
         <activity
             android:name=".DropdownAcitvityInfo"
             android:exported="false"
-            android:theme="@style/Theme.Android_advanced_phase" />
+             />
         <activity
             android:name=".ThreadsWithMultiThreads"
             android:exported="false"
-            android:theme="@style/Theme.Android_advanced_phase" />
+             />
         <activity
             android:name=".RoomDatabase"
             android:exported="false" />
@@ -37,7 +37,7 @@
         <activity
             android:name=".SqliteActivity"
             android:exported="false"
-            android:theme="@style/Theme.Android_advanced_phase" />
+             />
         <activity
             android:name=".SharepreferenceActivity"
             android:exported="false" />
@@ -47,7 +47,7 @@
         <activity
             android:name=".ExpandableListViewActivity"
             android:exported="false"
-            android:theme="@style/Theme.Android_advanced_phase" />
+            />
         <activity
             android:name=".AutocompleteActivity"
             android:exported="false" />

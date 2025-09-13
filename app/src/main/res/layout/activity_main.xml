@@ -141,21 +141,22 @@
     </LinearLayout>
 
 
-<!--    <LinearLayout-->
-<!--     android:id="@+id/ExpandableListView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical"-->
-<!--        android:background="@color/black"-->
-<!--        android:layout_marginBottom="20dp"-->
-<!--        >-->
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:text="ExpandableListView"-->
-<!--            />-->
-<!--    </LinearLayout>-->
+    <LinearLayout
+     android:id="@+id/DropdownView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/black"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="DropdownBtn"
+            />
+    </LinearLayout>
 
      <LinearLayout
      android:id="@+id/FeedBackMenu"
@@ -175,22 +176,7 @@
     </LinearLayout>
 
 
-     <LinearLayout
-     android:id="@+id/FireBaseChatApp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/black"
-        android:layout_marginBottom="20dp"
-        android:padding="10dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="FireBaseChatApp"
-            />
-    </LinearLayout>
+
 
 
      <LinearLayout
@@ -320,22 +306,7 @@
             />
     </LinearLayout>
 
-    <LinearLayout
-    android:id="@+id/RoomDatabase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/black"
-        android:layout_marginBottom="20dp"
-        android:padding="10dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="RoomDatabase"
-            />
-    </LinearLayout>
+
 
 
 
@@ -434,22 +405,7 @@
     </LinearLayout>
 
 
-    <LinearLayout
-    android:id="@+id/SqliteBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/black"
-        android:layout_marginBottom="20dp"
-        android:padding="10dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="SqliteBtn"
-            />
-    </LinearLayout>
+
 
 
      <LinearLayout
@@ -470,22 +426,22 @@
     </LinearLayout>
 
 
-    <LinearLayout
-     android:id="@+id/FragmentBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/black"
-        android:layout_marginBottom="20dp"
-        android:padding="10dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="FragmentBtn"
-            />
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--     android:id="@+id/FragmentBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:background="@color/black"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:padding="10dp"-->
+<!--        >-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:text="FragmentBtn"-->
+<!--            />-->
+<!--    </LinearLayout>-->
 
      <LinearLayout
     android:id="@+id/ThreadsMultiThreads"
@@ -520,6 +476,56 @@
             android:text="SideDraweWithBottomNav"
             />
     </LinearLayout>
+           <LinearLayout
+               android:id="@+id/SqliteBtn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:background="@color/black"
+               android:layout_marginBottom="20dp"
+               android:padding="10dp"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:text="SqliteBtn"
+                   />
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/RoomDatabase"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:background="@color/black"
+               android:layout_marginBottom="20dp"
+               android:padding="10dp"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:text="RoomDatabase"
+                   />
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/FireBaseChatApp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:background="@color/black"
+               android:layout_marginBottom="20dp"
+               android:padding="10dp"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:text="FireBaseChatApp"
+                   />
+           </LinearLayout>
 
 
 
