@@ -1,0 +1,56 @@
+package com.example.java_android_app;
+
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import com.example.java_android_app.databinding.ActivityAutocompleteBinding;
+
+
+public class AutocompleteActivity extends AppCompatActivity {
+
+    private ActivityAutocompleteBinding binding ;
+    private AutoCompleteTextView autoCompleteTextView ;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        binding = ActivityAutocompleteBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        setTitle("Auto complete edittext");
+        // Enable the back/up button in the toolbar
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
+        String[] fruits= {"Apple", "Banana", "Cherry", "Date", "Grapes", "Mango", "Orange"} ;
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.custom_dropdown_item,fruits);
+        binding.autoCompleteTextView.setAdapter(adapter);
+
+        binding.autoCompleteTextView.setOnClickListener(
+                v -> binding.autoCompleteTextView.showDropDown()
+        );
+
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed(); // Go back when button is clicked
+        return true;
+    }
+}
