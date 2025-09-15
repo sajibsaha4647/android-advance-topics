@@ -129,11 +129,11 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("title","MediaPlayer");
         });
 
-         binding.ActivityMenu.setOnClickListener(e->{
-         Intent intent = new Intent(MainActivity.this, MenuViewInfo.class);
-            startActivity(intent);
-            intent.putExtra("title","Activity Menu");
-        });
+//         binding.ActivityMenu.setOnClickListener(e->{
+//         Intent intent = new Intent(MainActivity.this, MenuViewInfo.class);
+//            startActivity(intent);
+//            intent.putExtra("title","Activity Menu");
+//        });
 
         binding.ProgressBar.setOnClickListener(e->{
          Intent intent = new Intent(MainActivity.this, Progressbarinfo.class);
@@ -159,11 +159,11 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("title","Share-preference");
         });
 
-         binding.ActivitySpinner.setOnClickListener(e->{
-         Intent intent = new Intent(MainActivity.this, SpinnerInfo.class);
-            startActivity(intent);
-            intent.putExtra("title","Activity Spinner");
-        });
+//         binding.ActivitySpinner.setOnClickListener(e->{
+//         Intent intent = new Intent(MainActivity.this, SpinnerInfo.class);
+//            startActivity(intent);
+//            intent.putExtra("title","Activity Spinner");
+//        });
 
         binding.SplashScreen.setOnClickListener(e->{
          Intent intent = new Intent(MainActivity.this, SplashScreenActivity.class);

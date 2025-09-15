@@ -1,10 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".Progressbarinfo">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Java -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Java"/>
+    <ProgressBar
+        android:id="@+id/progressJava"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:progress="80"
+        android:max="100"/>
+
+    <!-- Dart -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dart"
+        android:layout_marginTop="16dp"/>
+    <ProgressBar
+        android:id="@+id/progressDart"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:progress="70"
+        android:max="100"/>
+
+    <!-- JavaScript -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JavaScript"
+        android:layout_marginTop="16dp"/>
+    <ProgressBar
+        android:id="@+id/progressJS"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:progress="65"
+        android:max="100"/>
+
+    <!-- Kotlin -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kotlin"
+        android:layout_marginTop="16dp"/>
+    <ProgressBar
+        android:id="@+id/progressKotlin"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:progress="75"
+        android:max="100"/>
+
+</LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.widget.ProgressBar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,17 +27,30 @@ public class Progressbarinfo extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
         setTitle("Progress bar");
-
         // Enable the back/up button in the toolbar
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-//            getSupportActionBar().setHomeAsUpIndicator(true); // optional custom icon
         }
 
+
+         // Optional: animate progress
+        animateProgress(binding.progressJava, 80);
+        animateProgress(binding.progressDart, 70);
+        animateProgress(binding.progressJS, 65);
+        animateProgress(binding.progressKotlin, 75);
+
+    }
+
+    private void animateProgress(ProgressBar progressBar, int target) {
+        new Thread(() -> {
+            for (int i = 0; i <= target; i++) {
+                final int value = i;
+                runOnUiThread(() -> progressBar.setProgress(value));
+                try { Thread.sleep(15); } catch (InterruptedException e) { e.printStackTrace(); }
+            }
+        }).start();
     }
 
     @Override

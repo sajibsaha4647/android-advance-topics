@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.myapplication.databinding.ActivityThreadsWithMultiThreadsBinding;
 
@@ -35,11 +36,43 @@ public class ThreadsWithMultiThreads extends AppCompatActivity {
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-//            getSupportActionBar().setHomeAsUpIndicator(true); // optional custom icon
         }
 
+    binding.startThreadBtn.setOnClickListener(v -> startBackgroundTask());
+
+
     }
+
+private void startBackgroundTask() {
+    Log.d("TAG", "startBackgroundTask: ");
+
+    new Thread(() -> {
+        for (int i = 1; i <= 10; i++) {
+            try {
+                Thread.sleep(1000); // wait 1 second
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            Log.d("TAG", "startBackgroundTask: " + i);
+
+            int progress = i;
+
+            // Update UI safely from background
+            runOnUiThread(() -> {
+                binding.textView.setText("Progress: " + progress + "/10");
+            });
+        }
+
+        // Final update after task is done
+        runOnUiThread(() -> {
+            binding.textView.setText("Task Completed ✅");
+        });
+    }).start(); // <-- IMPORTANT
+}
+
+
+
 
     @Override
     public boolean onSupportNavigateUp() {
